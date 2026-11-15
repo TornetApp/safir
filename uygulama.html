@@ -108,9 +108,9 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
 .cb .ic{width:22px;height:22px}.cb.off{background:#f0546a26;color:#ff8a9b;box-shadow:inset 0 0 0 1px #f0546a66}.cb.leave{background:var(--r);color:#fff;box-shadow:none}
 
 /* sohbet */
-#chat{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(180deg,#0f1630d9,#0b1124f2);border:1px solid var(--line)}
+#chat,#dchat{flex:1;min-height:0;display:flex;flex-direction:column;position:relative;overflow:hidden;border-radius:18px;background:linear-gradient(180deg,#0f1630d9,#0b1124f2);border:1px solid var(--line)}
 .chh{display:flex;align-items:baseline;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}.chh b{font-size:14px}
-#msgs{flex:1;overflow:auto;padding:8px;display:flex;flex-direction:column;gap:1px}
+#msgs,#dmsgs{flex:1;overflow:auto;padding:8px;display:flex;flex-direction:column;gap:1px}
 .mg{display:flex;gap:12px;padding:2px 10px;border-radius:10px}.mg:hover{background:rgba(255,255,255,.035)}.mg.first{margin-top:10px;padding-top:4px}
 .mav{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;flex:none;font-size:15px;color:#fff;margin-top:2px}
 .mh{font-size:12px;color:var(--m)}.mh b{font-size:14px;color:var(--t)}
@@ -125,17 +125,17 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
 .file{background:#182247;border:1px solid var(--line);border-radius:12px;padding:9px 12px;margin-top:4px;display:inline-flex;gap:12px;align-items:center;max-width:min(400px,100%)}
 .bar{height:4px;background:#2a3558;border-radius:2px;overflow:hidden;margin-top:4px}.bar i{display:block;height:100%;background:var(--g)}
 .sys{color:var(--m);font-size:12px;text-align:center;padding:6px 0}
-#typing{padding:0 18px;height:18px;font-size:12px;color:var(--m)}
+#typing,#dtyping{padding:0 18px;height:18px;font-size:12px;color:var(--m)}
 .cbar{display:flex;align-items:flex-end;gap:4px;margin:6px 10px 10px;padding:5px;background:#0b1226;border:1px solid var(--line);border-radius:16px;transition:border-color .15s,box-shadow .15s}
 .cbar:focus-within{border-color:#2b7fd8;box-shadow:0 0 0 3px #2b7fd830}
-#ci{flex:1;resize:none;background:transparent;border:0;padding:9px 8px;max-height:120px;box-shadow:none!important}
+#ci,#dci{flex:1;resize:none;background:transparent;border:0;padding:9px 8px;max-height:120px;box-shadow:none!important}
 .send{display:grid;place-items:center;width:38px;height:38px;padding:0;border-radius:12px;flex:none}.send .ic{width:18px;height:18px}
-#emo{position:absolute;left:10px;bottom:66px;width:min(340px,calc(100% - 20px));background:#152046;border:1px solid var(--line2);border-radius:14px;box-shadow:0 12px 36px #000b;z-index:5;padding:8px}
-#etabs{display:flex;gap:4px;margin-bottom:6px}#etabs button{background:rgba(255,255,255,.07);padding:4px 10px;font-size:18px;box-shadow:none}#etabs button.on{background:var(--grad)}
-#egrid{display:grid;grid-template-columns:repeat(8,1fr);gap:2px;max-height:200px;overflow:auto}
+#emo,#demo{position:absolute;left:10px;bottom:66px;width:min(340px,calc(100% - 20px));background:#152046;border:1px solid var(--line2);border-radius:14px;box-shadow:0 12px 36px #000b;z-index:5;padding:8px}
+#etabs,#detabs{display:flex;gap:4px;margin-bottom:6px}#etabs button,#detabs button{background:rgba(255,255,255,.07);padding:4px 10px;font-size:18px;box-shadow:none}#etabs button.on,#detabs button.on{background:var(--grad)}
+#egrid,#degrid{display:grid;grid-template-columns:repeat(8,1fr);gap:2px;max-height:200px;overflow:auto}
 .eb{background:none;padding:3px;font-size:22px;border-radius:8px;line-height:1.25;box-shadow:none}.eb:hover{background:rgba(255,255,255,.1);filter:none}
-#dz{position:absolute;inset:0;background:#2b7fd8d9;display:grid;place-items:center;font-size:18px;font-weight:700;z-index:6}
-#newmsg{position:absolute;left:50%;transform:translateX(-50%);bottom:84px;z-index:4;box-shadow:0 6px 20px #0009}
+#dz,#ddz{position:absolute;inset:0;background:#2b7fd8d9;display:grid;place-items:center;font-size:18px;font-weight:700;z-index:6}
+#newmsg,#dnewmsg{position:absolute;left:50%;transform:translateX(-50%);bottom:84px;z-index:4;box-shadow:0 6px 20px #0009}
 #toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:80;display:none;gap:12px;align-items:center;max-width:min(92vw,520px);padding:12px 14px 12px 16px;border-radius:14px;background:#182247f2;border:1px solid var(--line2);box-shadow:0 12px 40px #000a;backdrop-filter:blur(12px);animation:rise .22s ease}
 @keyframes rise{from{opacity:0;transform:translate(-50%,10px)}}
 #toast button{padding:6px 12px;font-size:12.5px}
@@ -154,8 +154,56 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
  .chh .m{display:none}.rc{padding:16px}.ric{width:40px;height:40px}
  .cb{min-width:0;flex:1;flex-direction:row;justify-content:center;gap:8px;padding:10px 6px}.cb .ic{width:19px;height:19px}.ctl{gap:8px}
  .hero h1{font-size:24px}.rh h2{font-size:19px}
- #chat{min-height:260px}
+ #chat,#dchat{min-height:260px}
  .lc{padding:24px 20px 20px}
+}
+
+#dmv{flex:1;min-height:0;display:flex;flex-direction:column;gap:12px}
+.dmh{display:flex;align-items:center;gap:12px}
+.roombar{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;background:#32d58318;border:1px solid #32d58355;font-size:13px}.roombar span{flex:1}
+.fr.clk{cursor:pointer}.fr.act{background:rgba(43,127,216,.16)}
+.ub{min-width:20px;height:20px;padding:0 6px;border-radius:10px;background:var(--r);color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;flex:none}
+
+.tile .av,.mav{position:relative;overflow:hidden}.av img,.mav img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#msgs .mb{font-size:var(--cfs,14px)}
+.compact .mg{padding:0 10px}.compact .mg.first{margin-top:6px}.compact .fr{padding:3px 8px}.compact .tile{padding:10px 6px}
+#jreqs{display:flex;flex-direction:column;gap:8px}#jreqs:empty{display:none}
+select{background:#0b1226;border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--t);font:inherit;min-width:0}
+#rmode{width:100%}
+#settings{position:fixed;inset:0;z-index:70;display:flex;background:radial-gradient(900px 520px at 88% -12%,#1b3f8a40,transparent 70%),var(--bg);animation:fadein .15s ease}
+@keyframes fadein{from{opacity:0}}
+#snav{width:290px;flex:none;padding:36px 14px 24px;background:#0a1020;border-right:1px solid var(--line);overflow:auto;display:flex;flex-direction:column;gap:2px}
+.sg{font-size:11px;letter-spacing:.9px;color:var(--m);font-weight:700;padding:14px 12px 6px}
+.sn{display:block;width:100%;text-align:left;background:none;color:var(--m);padding:8px 12px;border-radius:8px;font-weight:600;box-shadow:none}
+.sn:hover{background:rgba(255,255,255,.06);color:var(--t);filter:none}.sn.on{background:rgba(43,127,216,.22);color:#fff}.sn.dg{color:#ff8a9b}
+.ssep{height:1px;background:var(--line);margin:10px 8px}.sver{color:var(--m);font-size:11px;padding:10px 12px}
+#spane{flex:1;min-width:0;overflow:auto;padding:36px 56px 70px;position:relative}
+#spc{max-width:740px}#spc h2{margin:0 0 18px;font-size:22px}
+#sclose{position:fixed;top:28px;right:34px;width:42px;height:42px;border:2px solid var(--line2);border-radius:50%;color:var(--m);flex-direction:column;z-index:2;background:var(--bg)}
+#sclose span{position:absolute;bottom:-18px;font-size:10px;font-weight:700;letter-spacing:.6px}
+.srow{display:flex;gap:18px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
+.srow .tx{flex:1;min-width:0}.srow .tx b{display:block;margin-bottom:2px}.srow .tx .m{line-height:1.5}
+.sh2{margin:26px 0 4px;font-size:12px;letter-spacing:.8px;text-transform:uppercase;color:var(--m);font-weight:700}
+.sw{position:relative;width:44px;height:26px;flex:none}.sw input{position:absolute;inset:0;opacity:0;cursor:pointer;z-index:1;margin:0;width:100%;height:100%;padding:0}
+.sw i{position:absolute;inset:0;background:#2a3558;border-radius:13px;transition:background .15s}
+.sw i::after{content:"";position:absolute;left:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s}
+.sw input:checked+i{background:var(--g)}.sw input:checked+i::after{transform:translateX(18px)}
+input[type=range]{accent-color:var(--a2);width:200px;padding:0;border:0;background:none;box-shadow:none}
+.meter{height:8px;border-radius:4px;background:#1b2440;overflow:hidden;width:220px}.meter i{display:block;height:100%;width:0;background:var(--g);transition:width .05s}
+.swt{display:flex;gap:12px;padding:12px 0 6px}.swt button{width:40px;height:40px;border-radius:50%;padding:0;border:3px solid transparent;box-shadow:none}.swt button.on{border-color:#fff}
+.pcard{border-radius:16px;overflow:hidden;background:#111933;border:1px solid var(--line);margin:4px 0 18px}
+.pbanner{height:84px;background:var(--grad)}.pbody{display:flex;align-items:flex-end;gap:14px;padding:0 18px 18px;margin-top:-34px;flex-wrap:wrap}
+.pbody .avt{border:5px solid #111933;box-shadow:none}.pn{flex:1;min-width:0;display:flex;flex-direction:column}.pn b{font-size:20px;overflow:hidden;text-overflow:ellipsis}
+.mono{font-family:ui-monospace,Consolas,monospace;color:#9fe4ff}
+.pgrid{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+.fld{margin-bottom:22px}.fld label{display:block;font-size:12px;font-weight:700;letter-spacing:.6px;color:var(--m);text-transform:uppercase;margin-bottom:8px}
+.dng{background:var(--r)}
+@media(max-width:820px){
+ #settings{flex-direction:column}
+ #snav{width:100%;flex-direction:row;overflow-x:auto;padding:10px 56px 10px 10px;border-right:0;border-bottom:1px solid var(--line);gap:4px;align-items:center}
+ .sn{width:auto;white-space:nowrap}.sg,.ssep,.sver{display:none}
+ #spane{padding:20px 16px 60px}#sclose{top:10px;right:10px;width:36px;height:36px}#sclose span{display:none}
+ .pgrid{grid-template-columns:1fr}.srow{flex-wrap:wrap}input[type=range],.meter{width:100%}
 }
 </style>
 </head>
@@ -177,6 +225,9 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
 <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></symbol>
+<symbol id="i-msg" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></symbol>
 </defs></svg>
 
 <div id="setup" hidden>
@@ -231,13 +282,15 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
   </div>
 </div>
 
+<div id="settings" hidden><div id="snav"></div><div id="spane"><div id="spc"></div><button id="sclose" class="ibtn" title="Kapat (Esc)" onclick="closeSettings()"><svg class="ic"><use href="#i-x"/></svg><span>ESC</span></button></div></div>
+
 <div id="scrim" onclick="sideOpen(false)"></div>
 <aside id="side">
   <div class="brand"><img class="lg" alt=""><span>Safir</span></div>
   <div class="me">
     <div class="avt on" style="--s:46px"><span id="mav"></span><img id="pic" hidden referrerpolicy="no-referrer" alt=""><i class="pd"></i></div>
     <div class="mi"><b id="me"></b><span class="m" id="st">bağlanıyor…</span></div>
-    <button class="ibtn" title="Çıkış yap" onclick="logout()"><svg class="ic"><use href="#i-leave"/></svg></button>
+    <div class="row" style="gap:0"><button class="ibtn" title="Ayarlar" onclick="openSettings()"><svg class="ic"><use href="#i-gear"/></svg></button><button class="ibtn" title="Çıkış yap" onclick="logout()"><svg class="ic"><use href="#i-leave"/></svg></button></div>
     <button id="inst" class="pill" hidden onclick="ip.prompt();this.hidden=true">Uygulama olarak yükle</button>
     <div class="codebar"><span class="m">Arkadaş kodun</span><b id="code"></b><button class="ibtn" title="Kodu kopyala" onclick="copy(st.code)"><svg class="ic"><use href="#i-copy"/></svg></button></div>
   </div>
@@ -247,15 +300,7 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
   <div id="reqs"></div>
   <div class="sh">Arkadaşlar <span class="cnt" id="fcnt"></span></div>
   <div id="fl"></div>
-  <div class="adv-wrap">
-    <details class="adv"><summary>Bağlantı ayarları (TURN)</summary>
-      <div style="margin:6px 0;line-height:1.5">Farklı ağlardaki (ör. mobil veri) arkadaşlarla bağlanamıyorsan gerekir. Ücretsiz metered.ca hesabından aldığın TURN kullanıcı adı ve şifresini yaz. Arkadaşların da aynısını girmeli.</div>
-      <input id="tu" placeholder="TURN kullanıcı adı">
-      <div class="row" style="margin-top:6px"><input id="tk" type="password" placeholder="TURN şifresi" style="flex:1;width:auto"><button class="pill" onclick="saveTurn()">Kaydet</button></div></details>
-    <details class="adv"><summary>Bağlantı bilgisi (sorun olursa kopyalayıp gönder)</summary>
-      <pre id="dbg"></pre>
-      <button class="pill alt" onclick="copy(dbg.join('\n'))"><svg class="ic"><use href="#i-copy"/></svg>Kopyala</button></details>
-  </div>
+  <div class="adv-wrap"><button class="pill alt" style="width:100%;justify-content:center;padding:10px" onclick="openSettings()"><svg class="ic"><use href="#i-gear"/></svg>Ayarlar</button></div>
 </aside>
 
 <main id="main">
@@ -264,7 +309,7 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
     <div class="hero"><h1>Konuşmaya hazır mısın?</h1><p>Bir oda kur ya da arkadaşının oda koduyla odaya katıl.</p></div>
     <div class="cards">
       <div class="rc"><div class="ric"><svg class="ic"><use href="#i-users"/></svg></div><h3>Oda oluştur</h3><p>Yeni bir sesli oda aç, kodu arkadaşlarınla paylaş.</p>
-        <input id="rname" placeholder="Oda adı (isteğe bağlı)" maxlength="30"><button class="btn" onclick="create()">Oda oluştur</button></div>
+        <input id="rname" placeholder="Oda adı (isteğe bağlı)" maxlength="30"><select id="rmode" title="Odaya kimler girebilir"><option value="open">Herkes (oda koduyla)</option><option value="friends">Yalnızca arkadaşlarım</option><option value="approve">Onayımla girsin</option></select><button class="btn" onclick="create()">Oda oluştur</button></div>
       <div class="rc"><div class="ric sec"><svg class="ic"><use href="#i-call"/></svg></div><h3>Odaya katıl</h3><p>Arkadaşından aldığın 6 karakterlik oda kodunu yaz.</p>
         <input id="rcode" placeholder="Oda kodu" maxlength="6" autocomplete="off"><button class="btn sec" onclick="join($('#rcode').value)">Odaya katıl</button></div>
     </div>
@@ -273,6 +318,7 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
   <div id="inroom" hidden>
     <div class="rh"><div><h2 id="rt"></h2><span class="m"><span class="livedot"></span><span id="rcnt"></span></span></div>
       <div class="codechip"><span class="m">Oda kodu</span><b id="rc"></b><button class="ibtn" title="Kodu kopyala" onclick="copy(room.code)"><svg class="ic"><use href="#i-copy"/></svg></button></div></div>
+    <div id="jreqs"></div>
     <div class="grid" id="grid"></div>
     <div class="ctl">
       <button id="bm" class="cb" onclick="mute()"><svg class="ic"><use href="#i-mic"/></svg><span>Mikrofon</span></button>
@@ -293,6 +339,29 @@ background:radial-gradient(800px 500px at 80% 0%,#2b54c855,transparent 70%),radi
         <button class="send" title="Gönder" onclick="sendCurrent()"><svg class="ic"><use href="#i-send"/></svg></button>
       </div>
       <input type="file" id="fi" multiple hidden>
+    </section>
+  </div>
+  <div id="dmv" hidden>
+    <div class="dmh">
+      <button class="ibtn" title="Geri" onclick="closeDM()"><svg class="ic"><use href="#i-back"/></svg></button>
+      <div class="avt" id="dmav" style="--s:40px"></div>
+      <div class="fi"><b id="dmn"></b><span class="m" id="dms"></span></div>
+      <button id="dmcall" class="pill alt" hidden></button>
+    </div>
+    <div id="dmroom" class="roombar" hidden><span>Sesli odadasın: <b id="dmrn"></b></span><button class="pill" onclick="closeDM()">Odaya dön</button></div>
+    <section id="dchat">
+      <div id="dmsgs"></div>
+      <button id="dnewmsg" class="pill" hidden>Yeni mesajlar ↓</button>
+      <div id="dtyping"></div>
+      <div id="demo" hidden><div id="detabs"></div><div id="degrid"></div></div>
+      <div id="ddz" hidden>Dosyayı buraya bırak</div>
+      <div class="cbar">
+        <button class="ibtn" id="demobtn" title="Emoji" onclick="togEmoji('d')"><svg class="ic"><use href="#i-smile"/></svg></button>
+        <button class="ibtn" title="Dosya gönder" onclick="document.getElementById('dfi').click()"><svg class="ic"><use href="#i-clip"/></svg></button>
+        <textarea id="dci" rows="1" maxlength="2000" placeholder="Mesaj yaz…" title="Enter gönderir, Shift+Enter yeni satır"></textarea>
+        <button class="send" title="Gönder" onclick="dmSend()"><svg class="ic"><use href="#i-send"/></svg></button>
+      </div>
+      <input type="file" id="dfi" multiple hidden>
     </section>
   </div>
 </main>
@@ -320,12 +389,16 @@ addEventListener('beforeinstallprompt',e=>{e.preventDefault();ip=e;$('#inst').hi
 }catch(e){}})();
 const PF='sesoda-',RPF='sesoda-oda-',CODE=/^[a-z0-9]{1,10}-[a-z0-9]{4}$/,RC=/^[a-z0-9]{6}$/;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const DEFSET={mic:'',spk:'',vol:100,ns:true,ec:true,agc:true,sens:18,notifSound:true,notifDesk:false,accent:'ocean',fsize:'m',compact:false,perm:{friends:true,dms:true,room:'open'}};
+const SET=JSON.parse(JSON.stringify(DEFSET));
+const ACC={ocean:['#43cfe0','#2b7fd8','#2a54c8'],violet:['#b9a5ff','#7c5cff','#5b3fd8'],rose:['#ff9ec0','#e0568b','#b83270'],emerald:['#6ee7c8','#2fb67c','#15803d'],amber:['#fcd34d','#ee8a3d','#c2410c'],slate:['#d5dcea','#8d99b5','#4b5878']};
+const OKAV=/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+\/=]+$/;
 const ico=(n,c)=>'<svg class="ic '+(c||'')+'"><use href="#i-'+n+'"/></svg>';
 const AVC=['#2b8fd6','#7c5cff','#e0568b','#ee8a3d','#2fb67c','#c9981f','#14a7b8','#b45bd8'];
 const avc=s=>AVC[Array.from(String(s)).reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7)%AVC.length];
 const rnd=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),b=>'abcdefghjkmnpqrstuvwxyz23456789'[b%31]).join('');
-let st=null,peer,local=null,room=null,muted=false,deaf=false,pend=null,joining=false,toastT,wl=null,tries=0,jTry=0,jTimer,pt,sentTy=0,unread=0,emoCat=null;
-const conns={},info={},reqs=[],an={},dbg=[],chatConns={},seen=new Set(),hist=[],inFiles={},typers={},chatLog=[];
+let st=null,peer,local=null,room=null,muted=false,deaf=false,pend=null,joining=false,toastT,wl=null,tries=0,jTry=0,jTimer,pt,sentTy=0,unread=0,emoCat=null,dmWith=null,dmSentTy=0,sndCtx=null;
+const conns={},info={},reqs=[],an={},dbg=[],chatConns={},seen=new Set(),hist=[],inFiles={},typers={},chatLog=[],dms={},avatars={};
 const save=()=>{try{localStorage.setItem('sesoda2f:'+st.code,JSON.stringify(st.friends))}catch(e){}};
 
 function toast(msg,label,fn){
@@ -491,9 +564,8 @@ function saveTurn(){
   location.reload();
 }
 function start(){
-  $('#me').textContent=st.name;$('#code').textContent=st.code;$('#mav').textContent=(st.name[0]||'?').toUpperCase();document.querySelector('.me .avt').style.background=avc(st.name);
-  if(st.pic){$('#pic').src=st.pic;$('#pic').hidden=false}
-  try{const t=JSON.parse(localStorage.getItem('safir_turn')||'null');if(t){$('#tu').value=t.u;$('#tk').value=t.k}}catch(e){}
+  loadSet();
+  $('#code').textContent=st.code;refreshMe();
   connectBroker();draw();
 }
 function connectBroker(){
@@ -524,6 +596,7 @@ function connectBroker(){
   mine.on('connection',c=>c.metadata&&c.metadata.chat?hookChat(c):hook(c));
   mine.on('call',c=>{
     if(!room||!local){c.close();return}
+    if(room.host&&room.mode&&room.mode!='open'&&!room.allowed.has(c.peer.slice(PF.length))){c.close();return}
     c.answer(local);addMember(c.peer.slice(PF.length),(c.metadata&&c.metadata.name)||'?',c);
   });
 }
@@ -535,31 +608,41 @@ const myRoom=()=>room?{code:room.code,name:room.name}:null;
 function hook(c){
   const id=c.peer.slice(PF.length);
   if(!CODE.test(id)){c.close();return}
-  c.on('open',()=>{conns[id]=c;log('veri bağlantısı açıldı: '+id);c.send({t:'hello',name:st.name,room:myRoom()});draw()});
+  c.on('open',()=>{conns[id]=c;log('veri bağlantısı açıldı: '+id);c.send({t:'hello',name:st.name,av:st.av||'',room:myRoom()});dmFlush(id);draw()});
   c.on('data',d=>msg(id,d||{}));
   c.on('close',()=>{if(conns[id]===c){delete conns[id];delete info[id]}draw()});
   c.on('error',e=>log('veri bağlantı hatası '+id+': '+(e.type||e)));
 }
 function msg(id,d){
   const f=st.friends.find(x=>x.code==id),name=String(d.name||'?').slice(0,16);
-  if(d.t=='hello'){info[id]={name,room:cleanRoom(d.room)};if(f&&f.name!=name){f.name=name;save()}}
+  if(f){
+    if(d.t=='dfc'){dFileChunk(id,d);return}
+    if(d.t=='dty'){dmTyping(id);return}
+    if(d.t=='dfs'){dFileStart(id,f,d);return}
+    if(d.t=='dm'&&typeof d.tx=='string'){dmIncoming(id,f,d);return}
+    if(d.t=='prof'){updFriendProf(id,f,d);return}
+  }
+  if(d.t=='hello'){info[id]={name,room:cleanRoom(d.room)};if(f)cacheAv(id,d.av);if(f&&f.name!=name){f.name=name;save()}}
   else if(d.t=='presence'){info[id]=Object.assign(info[id]||{name},{room:cleanRoom(d.room)})}
   else if(d.t=='req'){
+    if(!f&&!SET.perm.friends){if(conns[id])conns[id].send({t:'deny',why:'req'});return}
     if(f)conns[id]&&conns[id].send({t:'accept',name:st.name});
     else if(!reqs.find(r=>r.code==id)){reqs.push({code:id,name});toast(name+' seni arkadaş olarak eklemek istiyor.')}
   }
+  else if(d.t=='deny'){onDeny(id,d)}
   else if(d.t=='accept'){addFriend(id,name);toast(name+' isteğini kabul etti.')}
   else if(d.t=='invite'){
+    snd('call');desk('Safir',(info[id]?info[id].name:name)+' seni odaya çağırıyor');
     const r=cleanRoom(d.room);if(r)toast((info[id]?info[id].name:name)+' seni "'+r.name+'" odasına çağırıyor.','Katıl',()=>join(r.code));
   }
   draw();
 }
 function addFriend(code,name){
   if(!st.friends.find(f=>f.code==code)){st.friends.push({code,name});save()}
-  if(!conns[code])hook(peer.connect(PF+code));
+  if(!conns[code])hook(peer.connect(PF+code,{reliable:true}));
   draw();
 }
-function ping(){if(!peer||!peer.open)return;st.friends.forEach(f=>{if(!conns[f.code])hook(peer.connect(PF+f.code))})}
+function ping(){if(!peer||!peer.open)return;st.friends.forEach(f=>{if(!conns[f.code])hook(peer.connect(PF+f.code,{reliable:true}))})}
 function addByCode(){
   const code=$('#fc').value.trim().toLowerCase();
   if(!CODE.test(code))return toast('Kod şuna benzer olmalı: ab3k-9xq2');
@@ -567,7 +650,7 @@ function addByCode(){
   if(st.friends.find(f=>f.code==code))return toast('Zaten arkadaşsınız.');
   if(!peer||!peer.open)return toast('Önce aracı sunucuya bağlanmalısın. Üstte "çevrim içi" yazmalı.');
   pend={id:PF+code,msg:'Kişi çevrim dışı ya da kod yanlış.'};setTimeout(()=>pend=null,6000);
-  const c=peer.connect(PF+code);hook(c);
+  const c=peer.connect(PF+code,{reliable:true});hook(c);
   c.on('open',()=>{c.send({t:'req',name:st.name});toast('İstek gönderildi.')});
   setTimeout(()=>{if(!(conns[code]&&conns[code].open)&&pend)toast('Bağlantı kurulamadı. Karşı taraf çevrim dışı ya da ağ engelliyor olabilir.')},12000);
   $('#fc').value='';
@@ -578,26 +661,29 @@ function acc(code){
   if(conns[code])conns[code].send({t:'accept',name:st.name});
 }
 function dec(code){const i=reqs.findIndex(x=>x.code==code);if(i>=0)reqs.splice(i,1);draw()}
-function rm(code){st.friends=st.friends.filter(f=>f.code!=code);save();draw()}
-function inv(code){if(conns[code]&&room)conns[code].send({t:'invite',name:st.name,room:myRoom()});toast('Davet gönderildi.')}
+function rm(code){st.friends=st.friends.filter(f=>f.code!=code);save();if(dmWith==code)dmWith=null;try{localStorage.removeItem(dmKey(code));localStorage.removeItem(dmRKey(code))}catch(e){}delete dms[code];draw()}
+function inv(code){if(room&&room.host&&room.allowed)room.allowed.add(code);if(conns[code]&&room)conns[code].send({t:'invite',name:st.name,room:myRoom()});toast('Davet gönderildi.')}
 
 function draw(){
   if(!st)return;
-  const av=(n,on)=>'<div class="avt'+(on?' on':'')+'" style="--s:38px;background:'+avc(n)+'">'+esc((n[0]||'?').toUpperCase())+'<i class="pd"></i></div>';
+  const av=(n,on,c)=>'<div class="avt'+(on?' on':'')+'" style="--s:38px;background:'+avc(n)+'">'+esc((n[0]||'?').toUpperCase())+avImg(avatarOf(c))+'<i class="pd"></i></div>';
   $('#reqs').innerHTML=reqs.length?'<div class="sh">İstekler <span class="cnt">'+reqs.length+'</span></div>'+reqs.map(r=>
-    '<div class="fr">'+av(r.name,0)+'<div class="fi"><b>'+esc(r.name)+'</b><span class="m">Arkadaşlık isteği</span></div>'+
+    '<div class="fr">'+av(r.name,0,r.code)+'<div class="fi"><b>'+esc(r.name)+'</b><span class="m">Arkadaşlık isteği</span></div>'+
     '<button class="ibtn ok" title="Kabul et" onclick="acc(\''+r.code+'\')">'+ico('check')+'</button>'+
     '<button class="ibtn" title="Reddet" onclick="dec(\''+r.code+'\')">'+ico('x')+'</button></div>').join(''):'';
   const fr=st.friends.slice().sort((a,b)=>!!conns[b.code]-!!conns[a.code]);
   const onl=fr.filter(f=>conns[f.code]&&conns[f.code].open).length;
   $('#fcnt').textContent=fr.length?onl+'/'+fr.length+' çevrim içi':'';
   $('#fl').innerHTML=fr.length?fr.map(f=>{
-    const on=!!(conns[f.code]&&conns[f.code].open),i=info[f.code],r=on&&i&&i.room,mine=r&&room&&room.code==r.code;
-    return '<div class="fr">'+av(f.name,on)+'<div class="fi"><b>'+esc(f.name)+'</b><span class="m'+(r?' live':'')+'">'+(on?(r?'Odada: '+esc(r.name):'Çevrim içi'):'Çevrim dışı')+'</span></div>'+
+    const on=!!(conns[f.code]&&conns[f.code].open),i=info[f.code],r=on&&i&&i.room,mine=r&&room&&room.code==r.code,ub=dmUnread(f.code);
+    return '<div class="fr clk'+(dmWith==f.code?' act':'')+'" onclick="rowClick(event,\''+f.code+'\')">'+av(f.name,on,f.code)+'<div class="fi"><b>'+esc(f.name)+'</b><span class="m'+(r?' live':'')+'">'+(on?(r?'Odada: '+esc(r.name):'Çevrim içi'):'Çevrim dışı')+'</span></div>'+
+      (ub?'<span class="ub">'+(ub>9?'9+':ub)+'</span>':'')+
       (r&&!mine?'<button class="pill" data-close onclick="join(\''+r.code+'\')">'+ico('users')+'Katıl</button>':'')+
       (on&&room&&!r?'<button class="pill alt" data-close onclick="inv(\''+f.code+'\')">'+ico('call')+'Çağır</button>':'')+
+      '<button class="ibtn" title="Mesaj gönder" onclick="openDM(\''+f.code+'\')">'+ico('msg')+'</button>'+
       '<button class="ibtn rm" title="Arkadaşlıktan çıkar" onclick="rm(\''+f.code+'\')">'+ico('x')+'</button></div>';
   }).join(''):'<div class="empty">Henüz arkadaşın yok.<br>Arkadaşının kodunu yukarıya yapıştırıp Ekle düğmesine bas.</div>';
+  if(dmWith)dmHead();
   drawRoom();
 }
 
@@ -623,7 +709,8 @@ function openChat(code){
 function hookChat(c){
   const id=c.peer.slice(PF.length);
   if(!CODE.test(id)||!room||!c.metadata||c.metadata.room!==room.code){try{c.close()}catch(e){}return}
-  c.on('open',()=>{chatConns[id]=c;log('sohbet bağlantısı: '+id);if(hist.length)c.send({t:'hist',list:hist.slice(-30)})});
+  if(room.host&&room.mode&&room.mode!='open'&&!room.allowed.has(id)){try{c.close()}catch(e){}return}
+  c.on('open',()=>{chatConns[id]=c;log('sohbet bağlantısı: '+id);c.send({t:'prof',name:st.name,av:st.av||''});if(hist.length)c.send({t:'hist',list:hist.slice(-30)})});
   c.on('data',d=>onChat(id,d||{}));
   c.on('close',()=>{if(chatConns[id]===c)delete chatConns[id]});
   c.on('error',e=>log('sohbet hatası '+id+': '+(e.type||e)));
@@ -665,7 +752,7 @@ function fileHTML(m){
   const f=m.file,ic=IMG.test(f.mime)?'🖼️':/^audio/.test(f.mime)?'🎵':/^video/.test(f.mime)?'🎬':/zip|rar|7z|tar/.test(f.mime+f.name)?'🗜️':/pdf/.test(f.mime)?'📄':'📎';
   let h='';
   if(f.done&&IMG.test(f.mime)&&f.size<=10485760&&f.url)h+='<a href="'+f.url+'" target="_blank" rel="noopener"><img src="'+f.url+'" alt="" style="max-width:min(320px,100%);max-height:240px;border-radius:10px;display:block;margin:4px 0;animation:none"></a>';
-  h+='<div class="file"><span style="font-size:22px">'+ic+'</span><div style="min-width:0"><div style="font-weight:600;word-break:break-all">'+esc(f.name)+'</div><div class="m">'+fmtSize(f.size)+(f.done?'':' · %'+f.pct)+'</div>'+(f.done?'':'<div class="bar"><i style="width:'+f.pct+'%"></i></div>')+'</div>'+
+  h+='<div class="file"><span style="font-size:22px">'+ic+'</span><div style="min-width:0"><div style="font-weight:600;word-break:break-all">'+esc(f.name)+'</div><div class="m">'+fmtSize(f.size)+(f.done?(f.url?'':' · dosya artık mevcut değil'):' · %'+f.pct)+'</div>'+(f.done?'':'<div class="bar"><i style="width:'+f.pct+'%"></i></div>')+'</div>'+
     (f.done&&f.url?'<a class="dl" href="'+f.url+'" download="'+esc(f.name)+'">İndir</a>':'')+'</div>';
   return h;
 }
@@ -674,8 +761,8 @@ function msgHTML(m,cont){
   const own=m.from==st.code,t=new Date(m.ts).toLocaleTimeString('tr',{hour:'2-digit',minute:'2-digit'});
   const body=m.kind=='f'?fileHTML(m):textHTML(m.tx);
   return '<div class="mg'+(cont?'':' first')+'" id="msg-'+esc(m.id)+'">'+
-    (cont?'<div class="mav" style="visibility:hidden"></div>':'<div class="mav" style="background:'+avc(m.nm)+'">'+esc((m.nm||'?')[0].toUpperCase())+'</div>')+
-    '<div style="min-width:0;flex:1">'+(cont?'':'<div class="mh"><b'+(own?' style="color:var(--a)"':'')+'>'+esc(m.nm)+'</b> '+t+'</div>')+'<div class="mb">'+body+'</div></div></div>';
+    (cont?'<div class="mav" style="visibility:hidden"></div>':'<div class="mav" style="background:'+avc(m.nm)+'">'+esc((m.nm||'?')[0].toUpperCase())+avImg(avatarOf(m.from))+'</div>')+
+    '<div style="min-width:0;flex:1">'+(cont?'':'<div class="mh"><b'+(own?' style="color:var(--a)"':'')+'>'+esc(m.nm)+'</b> '+t+'</div>')+'<div class="mb">'+body+'</div>'+(m.st=='p'?'<div class="m">Gönderilecek: arkadaşın çevrim dışı</div>':'')+(m.st=='x'?'<div class="m" style="color:#ff8a9b">Gönderilemedi: bu kişi doğrudan mesajları kapattı</div>':'')+'</div></div>';
 }
 function renderChat(){
   const box=document.getElementById('msgs');if(!box)return;
@@ -714,12 +801,13 @@ function onChat(id,d){
   const nm=(room.members[id]&&room.members[id].name)||'?';
   if(d.t=='m'&&typeof d.tx=='string'){
     const m={id:String(d.id||'').slice(0,24),from:id,nm,tx:d.tx.slice(0,2000),ts:Number(d.ts)||Date.now()};
-    hist.push(m);if(hist.length>60)hist.shift();delete typers[id];addMsg(m,true);
+    hist.push(m);if(hist.length>60)hist.shift();delete typers[id];if(document.hidden||dmWith)snd('msg');addMsg(m,true);
   }else if(d.t=='hist'&&Array.isArray(d.list)){
     d.list.slice(-30).forEach(m=>{if(m&&typeof m.tx=='string'){
       const x={id:String(m.id||'').slice(0,24),from:String(m.from||'').slice(0,20),nm:String(m.nm||'?').slice(0,16),tx:m.tx.slice(0,2000),ts:Number(m.ts)||0};
       if(x.id&&!seen.has(x.id)){hist.push(x);addMsg(x,false)}
     }});
+  }else if(d.t=='prof'){const mb=room.members[id];if(mb&&d.name)mb.name=String(d.name).slice(0,16);cacheAv(id,d.av);drawRoom();renderChat();
   }else if(d.t=='ty'){typers[id]={nm,until:Date.now()+3000};showTyping()}
   else if(d.t=='fs')fileStart(id,nm,d);
   else if(d.t=='fc')fileChunk(id,d);
@@ -775,43 +863,455 @@ function showTyping(){
 }
 
 /* emoji seçici ve giriş kutusu */
-function togEmoji(){
-  const p=document.getElementById('emo');p.hidden=!p.hidden;
-  if(p.hidden)return;
-  const t=document.getElementById('etabs');
+function togEmoji(p){
+  p=p||'';
+  const pop=document.getElementById(p+'emo');pop.hidden=!pop.hidden;
+  if(pop.hidden)return;
+  const t=document.getElementById(p+'etabs');
   if(!t.innerHTML)t.innerHTML=Object.keys(EMO).map(k=>'<button data-k="'+k+'">'+k+'</button>').join('');
-  emoTab(emoCat||Object.keys(EMO)[0]);
+  emoTab(emoCat||Object.keys(EMO)[0],p);
 }
-function emoTab(k){
-  emoCat=k;
-  document.querySelectorAll('#etabs button').forEach(b=>b.classList.toggle('on',b.dataset.k==k));
-  document.getElementById('egrid').innerHTML=EMO[k].split(' ').map(e=>'<button class="eb">'+e+'</button>').join('');
+function emoTab(k,p){
+  p=p||'';emoCat=k;
+  document.querySelectorAll('#'+p+'etabs button').forEach(b=>b.classList.toggle('on',b.dataset.k==k));
+  document.getElementById(p+'egrid').innerHTML=EMO[k].split(' ').map(e=>'<button class="eb">'+e+'</button>').join('');
 }
-function insEmoji(e){
-  const t=document.getElementById('ci'),a=t.selectionStart==null?t.value.length:t.selectionStart,b=t.selectionEnd==null?a:t.selectionEnd;
-  t.value=(t.value.slice(0,a)+e+t.value.slice(b)).slice(0,2000);const p=a+e.length;
-  try{t.setSelectionRange(p,p)}catch(x){}t.focus();autoGrow();
+function insEmoji(e,p){
+  p=p||'';
+  const t=document.getElementById(p+'ci'),a=t.selectionStart==null?t.value.length:t.selectionStart,b=t.selectionEnd==null?a:t.selectionEnd;
+  t.value=(t.value.slice(0,a)+e+t.value.slice(b)).slice(0,2000);const q=a+e.length;
+  try{t.setSelectionRange(q,q)}catch(x){}t.focus();autoGrow(p);
 }
-function autoGrow(){const t=document.getElementById('ci');t.style.height='auto';t.style.height=Math.min(t.scrollHeight,120)+'px'}
-(function chatInit(){
-  const g=id=>document.getElementById(id),ci=g('ci');
-  ci.addEventListener('keydown',e=>{if(e.key=='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();sendCurrent()}});
-  ci.addEventListener('input',()=>{autoGrow();const n=Date.now();if(n-sentTy>2500&&ci.value){sentTy=n;bcast({t:'ty'})}});
-  ci.addEventListener('paste',e=>{const fs=Array.from((e.clipboardData&&e.clipboardData.files)||[]);if(fs.length){e.preventDefault();sendFiles(fs)}});
-  g('fi').addEventListener('change',e=>{sendFiles(Array.from(e.target.files));e.target.value=''});
-  g('etabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)emoTab(b.dataset.k)});
-  g('egrid').addEventListener('click',e=>{const b=e.target.closest('button');if(b)insEmoji(b.textContent)});
-  document.addEventListener('click',e=>{if(!e.target.closest||!e.target.closest('#emo,#emobtn'))g('emo').hidden=true});
-  const ch=g('chat'),hasFiles=e=>e.dataTransfer&&Array.from(e.dataTransfer.types||[]).includes('Files');
+function autoGrow(p){const t=document.getElementById((p||'')+'ci');t.style.height='auto';t.style.height=Math.min(t.scrollHeight,120)+'px'}
+function bindChat(p,o){
+  const g=id=>document.getElementById(p+id),ci=g('ci'),box=g('msgs'),ch=g('chat');
+  ci.addEventListener('keydown',e=>{if(e.key=='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();o.send()}});
+  ci.addEventListener('input',()=>{autoGrow(p);o.typing(ci)});
+  ci.addEventListener('paste',e=>{const fs=Array.from((e.clipboardData&&e.clipboardData.files)||[]);if(fs.length){e.preventDefault();o.files(fs)}});
+  g('fi').addEventListener('change',e=>{o.files(Array.from(e.target.files));e.target.value=''});
+  g('etabs').addEventListener('click',e=>{const b=e.target.closest('button');if(b)emoTab(b.dataset.k,p)});
+  g('egrid').addEventListener('click',e=>{const b=e.target.closest('button');if(b)insEmoji(b.textContent,p)});
+  const hasFiles=e=>e.dataTransfer&&Array.from(e.dataTransfer.types||[]).includes('Files');
   ch.addEventListener('dragover',e=>{if(hasFiles(e)){e.preventDefault();g('dz').hidden=false}});
   g('dz').addEventListener('dragleave',()=>{g('dz').hidden=true});
-  ch.addEventListener('drop',e=>{if(hasFiles(e)){e.preventDefault();g('dz').hidden=true;sendFiles(Array.from(e.dataTransfer.files))}});
-  const box=g('msgs');
+  ch.addEventListener('drop',e=>{if(hasFiles(e)){e.preventDefault();g('dz').hidden=true;o.files(Array.from(e.dataTransfer.files))}});
   box.addEventListener('scroll',()=>{if(box.scrollHeight-box.scrollTop-box.clientHeight<90)g('newmsg').hidden=true});
   g('newmsg').addEventListener('click',()=>{box.scrollTop=box.scrollHeight;g('newmsg').hidden=true});
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden){unread=0;document.title='Safir'}});
-  box.innerHTML=EMPTY;setInterval(showTyping,1000);
-})();
+}
+
+/* ---------- doğrudan mesajlar ---------- */
+const DEMPTY='<div class="m" style="margin:auto;text-align:center;padding:20px;line-height:1.6">Henüz mesaj yok.<br>Mesajlar bu cihazda saklanır. Arkadaşın çevrim dışıysa, çevrim içi olunca gönderilir.</div>';
+function dmKey(c){return 'safir_dm:'+st.code+':'+c}
+function dmRKey(c){return 'safir_dmr:'+st.code+':'+c}
+function dmFriend(c){return st.friends.find(f=>f.code==c)}
+function dmGet(c){
+  if(!dms[c]){
+    let log=[],rd=0;
+    try{log=JSON.parse(localStorage.getItem(dmKey(c))||'[]')}catch(e){}
+    try{rd=Number(localStorage.getItem(dmRKey(c))||0)}catch(e){}
+    if(!Array.isArray(log))log=[];
+    log=log.filter(m=>m&&typeof m.id=='string'&&typeof m.ts=='number'&&(m.kind=='f'?m.file:typeof m.tx=='string'));
+    dms[c]={log,seen:new Set(log.map(m=>m.id)),read:rd,typing:0,files:{}};
+  }
+  return dms[c];
+}
+function dmUnread(c){const d=dmGet(c);return d.log.filter(m=>m.from==c&&m.ts>d.read).length}
+function dmSave(c){
+  const d=dms[c];if(!d)return;
+  const out=d.log.slice(-200).map(m=>m.kind=='f'?{id:m.id,from:m.from,nm:m.nm,ts:m.ts,kind:'f',file:{fid:m.file.fid,name:m.file.name,size:m.file.size,mime:'',url:'',pct:100,done:true}}:m);
+  try{localStorage.setItem(dmKey(c),JSON.stringify(out))}catch(e){}
+}
+function dmMarkRead(c){const d=dmGet(c);d.read=Date.now();try{localStorage.setItem(dmRKey(c),String(d.read))}catch(e){}}
+function dmRender(){
+  const b=document.getElementById('dmsgs'),d=dmWith&&dmGet(dmWith);if(!b)return;
+  b.innerHTML=d&&d.log.length?d.log.map((m,i)=>msgHTML(m,isCont(d.log[i-1],m))).join(''):DEMPTY;
+  b.scrollTop=b.scrollHeight;
+}
+function dmAdd(c,m,live){
+  const d=dmGet(c);m.kind=m.kind||'t';
+  if(d.seen.has(m.id))return;d.seen.add(m.id);
+  let i=d.log.length;while(i>0&&d.log[i-1].ts>m.ts)i--;d.log.splice(i,0,m);
+  if(d.log.length>300)d.log.shift();
+  if(m.kind!='f'||m.file.done)dmSave(c);
+  const view=dmWith==c;
+  if(view){
+    if(i<d.log.length-1||d.log.length==1)dmRender();
+    else{
+      const box=document.getElementById('dmsgs'),near=box.scrollHeight-box.scrollTop-box.clientHeight<90;
+      box.insertAdjacentHTML('beforeend',msgHTML(m,isCont(d.log[d.log.length-2],m)));
+      if(m.from==st.code||near)box.scrollTop=box.scrollHeight;else document.getElementById('dnewmsg').hidden=false;
+    }
+    if(m.from!=st.code&&!document.hidden)dmMarkRead(c);
+  }
+  if(live&&m.from==c){
+    if(document.hidden){unread++;document.title='('+unread+') Safir'}
+    if(document.hidden||!view){snd('msg');const f0=dmFriend(c);desk(f0?f0.name:'Safir',m.kind=='f'?'Dosya gönderdi':m.tx)}
+    if(!view){const f=dmFriend(c);toast((f?f.name:'Arkadaşın')+': '+(m.kind=='f'?'dosya gönderdi':m.tx.slice(0,60)),'Aç',()=>openDM(c))}
+    draw();
+  }
+}
+function dmSend(){
+  const c=dmWith;if(!c)return;
+  const ci=document.getElementById('dci'),tx=ci.value.trim();if(!tx)return;
+  const m={id:'d'+rnd(10),from:st.code,nm:st.name,tx:tx.slice(0,2000),ts:Date.now()},cn=conns[c];
+  if(cn&&cn.open){try{cn.send({t:'dm',id:m.id,tx:m.tx,ts:m.ts})}catch(e){m.st='p'}}else m.st='p';
+  dmAdd(c,m,true);ci.value='';ci.style.height='';
+}
+function dmFlush(c){
+  if(!dmFriend(c))return;
+  const d=dmGet(c),cn=conns[c];if(!cn||!cn.open)return;
+  let n=0;
+  d.log.forEach(m=>{if(m.st=='p'&&m.from==st.code&&m.kind!='f'){try{cn.send({t:'dm',id:m.id,tx:m.tx,ts:m.ts});delete m.st;n++}catch(e){}}});
+  if(n){dmSave(c);if(dmWith==c)dmRender()}
+}
+function dmIncoming(id,f,d){
+  const mid=String(d.id||'').slice(0,24);if(!mid)return;
+  if(!SET.perm.dms){const cn=conns[id];if(cn&&cn.open)cn.send({t:'deny',why:'dm',id:mid});return}
+  dmGet(id).typing=0;
+  dmAdd(id,{id:mid,from:id,nm:f.name,tx:String(d.tx).slice(0,2000),ts:Date.now()},true);
+}
+function dmTyping(id){dmGet(id).typing=Date.now()+3000;dmShowTyping()}
+function dmShowTyping(){
+  const e=document.getElementById('dtyping');if(!e)return;
+  const d=dmWith&&dms[dmWith],f=dmWith&&dmFriend(dmWith);
+  e.textContent=d&&f&&d.typing>Date.now()?f.name+' yazıyor…':'';
+}
+const dmUpd=(c,m)=>{if(dmWith==c){const e=document.getElementById('msg-'+m.id),b=e&&e.querySelector('.mb');if(b)b.innerHTML=fileHTML(m)}};
+async function dmSendFiles(files){
+  const c0=dmWith;if(!c0)return;
+  const cn=conns[c0];
+  if(!cn||!cn.open)return toast('Arkadaşın çevrim dışı, dosya şu an gönderilemez.');
+  for(const f of files){
+    if(f.size>MAXF){toast(f.name+' çok büyük (en fazla 25 MB).');continue}
+    const fid=rnd(10),n=Math.max(1,Math.ceil(f.size/CH));
+    const mo={id:'d'+fid,from:st.code,nm:st.name,ts:Date.now(),kind:'f',file:{fid,name:safeName(f.name),size:f.size,mime:f.type||'',url:URL.createObjectURL(f),pct:0,done:false}};
+    dmAdd(c0,mo,true);
+    cn.send({t:'dfs',fid,name:mo.file.name,size:f.size,mime:mo.file.mime,n});
+    for(let i=0;i<n;i++){
+      if(!cn.open)break;
+      const buf=await f.slice(i*CH,(i+1)*CH).arrayBuffer();
+      while(cn.dataChannel&&cn.dataChannel.bufferedAmount>1048576)await new Promise(r=>setTimeout(r,30));
+      cn.send({t:'dfc',fid,i,d:buf});
+      mo.file.pct=Math.round((i+1)/n*100);dmUpd(c0,mo);
+    }
+    mo.file.done=true;dmUpd(c0,mo);dmSave(c0);
+  }
+}
+function dFileStart(id,f,d){
+  const fid=String(d.fid||'').slice(0,20),size=Number(d.size),n=Number(d.n),dd=dmGet(id);
+  if(!fid||dd.files[fid]||!(size>=0)||size>MAXF||n!=Math.max(1,Math.ceil(size/CH))||Object.keys(dd.files).length>4)return;
+  const mime=IMG.test(String(d.mime))?String(d.mime):'';
+  const mo={id:'d'+fid+id,from:id,nm:f.name,ts:Date.now(),kind:'f',file:{fid,name:safeName(d.name),size,mime,url:'',pct:0,done:false}};
+  dd.files[fid]={chunks:new Array(n),got:0,n,size,mime,mo};dmAdd(id,mo,true);
+}
+function dFileChunk(id,d){
+  const dd=dmGet(id),fid=String(d.fid||'').slice(0,20),r=dd.files[fid];if(!r)return;
+  const i=Number(d.i);if(!(i>=0&&i<r.n)||r.chunks[i])return;
+  const u=d.d instanceof ArrayBuffer?new Uint8Array(d.d):d.d;if(!u||u.byteLength>CH)return;
+  r.chunks[i]=u;r.got++;r.mo.file.pct=Math.round(r.got/r.n*100);
+  if(r.got<r.n){dmUpd(id,r.mo);return}
+  const blob=new Blob(r.chunks,{type:r.mime||'application/octet-stream'});delete dd.files[fid];
+  if(blob.size!=r.size){r.mo.file.name+=' (bozuk)';r.mo.file.done=true;dmUpd(id,r.mo);return}
+  r.mo.file.url=URL.createObjectURL(blob);r.mo.file.done=true;dmUpd(id,r.mo);dmSave(id);
+}
+function rowClick(e,c){if(!e.target.closest('button'))openDM(c)}
+function openDM(c){
+  const f=dmFriend(c);if(!f)return;
+  dmWith=c;dmMarkRead(c);
+  document.getElementById('dmn').textContent=f.name;
+  const av=document.getElementById('dmav');av.innerHTML=esc((f.name[0]||'?').toUpperCase())+avImg(avatarOf(c));av.style.background=avc(f.name);
+  const nb=document.getElementById('dnewmsg');if(nb)nb.hidden=true;
+  sideOpen(false);dmRender();draw();
+  const ci=document.getElementById('dci');if(ci&&ci.focus)ci.focus();
+}
+function closeDM(){dmWith=null;draw()}
+function dmHead(){
+  const f=dmFriend(dmWith);if(!f){dmWith=null;return}
+  document.getElementById('dmn').textContent=f.name;
+  const c=conns[dmWith],on=!!(c&&c.open),i=info[dmWith],ir=on&&i&&i.room;
+  const s=document.getElementById('dms');s.textContent=on?(ir?'Odada: '+ir.name:'Çevrim içi'):'Çevrim dışı · mesajların çevrim içi olunca iletilir';s.className='m'+(on?' live':'');
+  const rb=document.getElementById('dmroom');rb.hidden=!room;if(room)document.getElementById('dmrn').textContent=room.name;
+  const cb=document.getElementById('dmcall'),code=dmWith;
+  if(on&&room&&!ir){cb.hidden=false;cb.innerHTML=ico('call')+'Odama çağır';cb.onclick=()=>inv(code)}
+  else if(ir&&!(room&&room.code==ir.code)){cb.hidden=false;cb.innerHTML=ico('users')+'Odasına katıl';cb.onclick=()=>{join(ir.code);closeDM()}}
+  else cb.hidden=true;
+}
+bindChat('',{send:sendCurrent,files:sendFiles,typing:ci=>{const n=Date.now();if(n-sentTy>2500&&ci.value){sentTy=n;bcast({t:'ty'})}}});
+bindChat('d',{send:dmSend,files:dmSendFiles,typing:ci=>{const n=Date.now(),c=dmWith&&conns[dmWith];if(c&&c.open&&n-dmSentTy>2500&&ci.value){dmSentTy=n;c.send({t:'dty'})}}});
+document.addEventListener('click',e=>{
+  const t=e.target,h=!t.closest;
+  if(h||!t.closest('#emo,#emobtn'))document.getElementById('emo').hidden=true;
+  if(h||!t.closest('#demo,#demobtn'))document.getElementById('demo').hidden=true;
+});
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){unread=0;document.title='Safir';if(dmWith){dmMarkRead(dmWith);draw()}}});
+document.getElementById('msgs').innerHTML=EMPTY;setInterval(showTyping,1000);setInterval(dmShowTyping,1000);
+
+
+/* ---------- ayarlar, profil, izinler ---------- */
+function avatarOf(c){return c==st.code?(st.av||''):(avatars[c]||'')}
+function avImg(x){return x?'<img alt="" src="'+x+'">':''}
+function cacheAv(c,av){
+  if(!av){if(avatars[c]){delete avatars[c];try{localStorage.setItem('safir_avc',JSON.stringify(avatars))}catch(e){}}return}
+  if(typeof av!='string'||av.length>40000||!OKAV.test(av))return;
+  if(avatars[c]!==av){avatars[c]=av;try{localStorage.setItem('safir_avc',JSON.stringify(avatars))}catch(e){}}
+}
+function saveSet(){try{localStorage.setItem('safir_set:'+st.code,JSON.stringify(SET))}catch(e){}}
+function loadSet(){
+  let o=null;try{o=JSON.parse(localStorage.getItem('safir_set:'+st.code)||'null')}catch(e){}
+  Object.assign(SET,JSON.parse(JSON.stringify(DEFSET)),o||{});SET.perm=Object.assign({},DEFSET.perm,(o&&o.perm)||{});
+  let pr=null;try{pr=JSON.parse(localStorage.getItem('safir_prof:'+st.code)||'null')}catch(e){}
+  if(pr){if(typeof pr.av=='string'&&OKAV.test(pr.av))st.av=pr.av;if(pr.name)st.name=String(pr.name).slice(0,16)}
+  try{Object.assign(avatars,JSON.parse(localStorage.getItem('safir_avc')||'{}'))}catch(e){}
+  const rm=document.getElementById('rmode');if(rm)rm.value=SET.perm.room;
+  applyLook();
+}
+function saveProfile(){
+  try{
+    localStorage.setItem('safir_prof:'+st.code,JSON.stringify({av:st.av||'',name:st.name}));
+    const a=JSON.parse(localStorage.getItem(AK)||'null');if(a){a.name=st.name;localStorage.setItem(AK,JSON.stringify(a))}
+  }catch(e){}
+}
+function applyLook(){
+  const a=ACC[SET.accent]||ACC.ocean,r=document.documentElement.style;
+  r.setProperty('--a1',a[0]);r.setProperty('--a2',a[1]);r.setProperty('--a3',a[2]);r.setProperty('--a',a[1]);
+  r.setProperty('--cfs',({s:'13px',m:'14.5px',l:'16.5px'})[SET.fsize]||'14.5px');
+  document.body.classList.toggle('compact',!!SET.compact);
+}
+function refreshMe(){
+  $('#me').textContent=st.name;$('#mav').textContent=(st.name[0]||'?').toUpperCase();
+  const a=document.querySelector('.me .avt');if(a)a.style.background=avc(st.name);
+  const src=st.av||st.pic||'',p=$('#pic');
+  if(src){p.src=src;p.hidden=false}else{p.removeAttribute('src');p.hidden=true}
+}
+function bcastProf(){
+  const o={t:'prof',name:st.name,av:st.av||''};
+  Object.values(conns).forEach(c=>{try{if(c.open)c.send(o)}catch(e){}});bcast(o);
+}
+function updFriendProf(id,f,d){
+  const nm=String(d.name||'').slice(0,16);if(nm&&nm!=f.name){f.name=nm;save()}
+  cacheAv(id,d.av);draw();if(dmWith==id)dmRender();
+}
+function onDeny(id,d){
+  if(d.why=='dm')dmDenied(id,d.id);
+  else if(d.why=='req')toast('Bu kişi arkadaşlık isteği kabul etmiyor.');
+}
+function dmDenied(id,mid){
+  const d=dmGet(id);d.log.forEach(m=>{if(m.from==st.code&&(m.id==mid||m.st=='p'))m.st='x'});
+  dmSave(id);if(dmWith==id)dmRender();
+  const f=dmFriend(id);toast((f?f.name:'Bu kişi')+' doğrudan mesajları kapattı.');
+}
+
+/* oda erişimi */
+function gateJoin(c){
+  if(!room||!room.host)return;
+  const code=String(c.peer).slice(PF.length);
+  if(!CODE.test(code)){try{c.close()}catch(e){}return}
+  const reply=()=>{try{c.send({t:'members',rname:room.name,list:[{code:st.code,name:st.name}].concat(Object.keys(room.members).map(k=>({code:k,name:room.members[k].name})))})}catch(e){}};
+  const deny=why=>{try{c.send({t:'denied',why})}catch(e){}setTimeout(()=>{try{c.close()}catch(e){}},400)};
+  if(room.mode=='open'||room.allowed.has(code))return reply();
+  if(room.mode=='friends'){if(dmFriend(code)){room.allowed.add(code);reply()}else deny('friends');return}
+  const f=dmFriend(code);
+  if(!room.pending.find(x=>x.code==code)){
+    room.pending.push({code,name:(f&&f.name)||c.who||'Bir kullanıcı',reply,deny});renderJoinReqs();
+    snd('call');desk('Safir','Biri odana katılmak istiyor');
+  }
+  try{c.send({t:'wait'})}catch(e){}
+  c.on('close',()=>{if(!room||!room.pending)return;const i=room.pending.findIndex(x=>x.code==code);if(i>=0){room.pending.splice(i,1);renderJoinReqs()}});
+}
+function renderJoinReqs(){
+  const el=$('#jreqs');if(!el)return;
+  el.innerHTML=room&&room.pending&&room.pending.length?room.pending.map(p=>'<div class="roombar"><span><b>'+esc(p.name)+'</b> odaya katılmak istiyor</span><button class="pill" onclick="joinDecision(\''+p.code+'\',1)">'+ico('check')+'Kabul et</button><button class="pill alt" onclick="joinDecision(\''+p.code+'\',0)">Reddet</button></div>').join(''):'';
+}
+function joinDecision(code,yes){
+  if(!room||!room.pending)return;const i=room.pending.findIndex(p=>p.code==code);if(i<0)return;
+  const p=room.pending.splice(i,1)[0];
+  if(yes){room.allowed.add(code);p.reply()}else p.deny('rejected');
+  renderJoinReqs();
+}
+
+/* ses: aygıtlar, çıkış, bildirim sesleri */
+async function getMic(){
+  const base={echoCancellation:SET.ec,noiseSuppression:SET.ns,autoGainControl:SET.agc};
+  if(SET.mic){try{return await navigator.mediaDevices.getUserMedia({audio:Object.assign({deviceId:{exact:SET.mic}},base)})}catch(e){}}
+  return await navigator.mediaDevices.getUserMedia({audio:base});
+}
+async function restartMic(){
+  if(!local||!room)return;
+  try{
+    const ns=await getMic(),t=ns.getAudioTracks()[0];t.enabled=!muted;
+    Object.values(room.members).forEach(m=>{try{const sd=m.call.peerConnection.getSenders().find(x=>x.track&&x.track.kind=='audio');if(sd)sd.replaceTrack(t)}catch(e){}});
+    local.getTracks().forEach(x=>x.stop());local=ns;delete an.me;watch('me',local);
+  }catch(e){toast('Mikrofon değiştirilemedi.')}
+}
+function applyOut(el){if(!el)return;try{el.volume=Math.max(0,Math.min(1,SET.vol/100))}catch(e){}if(SET.spk&&el.setSinkId)el.setSinkId(SET.spk).catch(()=>{})}
+function applyOutAll(){if(room)Object.values(room.members).forEach(m=>applyOut(m.el))}
+function snd(k){
+  if(!SET.notifSound)return;
+  try{
+    sndCtx=sndCtx||new (window.AudioContext||window.webkitAudioContext)();if(sndCtx.state=='suspended')sndCtx.resume();
+    const T=({msg:[[880,0,.07],[1175,.08,.09]],join:[[523,0,.08],[784,.09,.12]],leave:[[784,0,.08],[523,.09,.12]],call:[[659,0,.15],[784,.2,.15],[659,.4,.15],[784,.6,.15]]})[k]||[];
+    T.forEach(([f,t,d])=>{const o=sndCtx.createOscillator(),g=sndCtx.createGain(),n=sndCtx.currentTime;
+      o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(0,n+t);g.gain.linearRampToValueAtTime(.12,n+t+.01);g.gain.exponentialRampToValueAtTime(.0001,n+t+d);
+      o.connect(g);g.connect(sndCtx.destination);o.start(n+t);o.stop(n+t+d+.02)});
+  }catch(e){}
+}
+function desk(title,body){
+  if(SET.notifDesk&&window.Notification&&Notification.permission=='granted'&&document.hidden){try{new Notification(title,{body:String(body).slice(0,120),icon:I192})}catch(e){}}
+}
+
+/* ayarlar penceresi */
+let curSP='acc',mt=null;
+const sw=(k,on)=>'<label class="sw"><input type="checkbox"'+(on?' checked':'')+' onchange="setOpt(\''+k+'\',this.checked)"><i></i></label>';
+const srow=(t,d,ctl)=>'<div class="srow"><div class="tx"><b>'+t+'</b><span class="m">'+d+'</span></div>'+(ctl||'')+'</div>';
+function pcard(){
+  const src=st.av||st.pic;
+  return '<div class="pcard"><div class="pbanner"></div><div class="pbody"><div class="avt" style="--s:84px;background:'+avc(st.name)+'">'+esc((st.name[0]||'?').toUpperCase())+(src?'<img alt="" src="'+esc(src)+'">':'')+'</div><div class="pn"><b>'+esc(st.name)+'</b><span class="m">Arkadaş kodu: <span class="mono">'+esc(st.code)+'</span></span></div></div></div>';
+}
+function pgAcc(){
+  return '<h2>Hesabım</h2>'+pcard()+
+    srow('Görünen ad',esc(st.name),'<button class="pill alt" onclick="sPage(\'prof\')">Düzenle</button>')+
+    srow('Arkadaş kodu','Arkadaşların seni bu kodla ekler. Kod hesabına bağlıdır, her cihazda aynı kalır.','<button class="pill" onclick="copy(st.code)">'+ico('copy')+'Kopyala</button>')+
+    '<h3 class="sh2">Tehlikeli bölge</h3>'+
+    srow('Bu cihazdaki verileri sil','Arkadaş listen, doğrudan mesajların, ayarların ve profil fotoğrafın bu cihazdan silinir. Hesabın silinmez.','<button class="pill dng" onclick="wipeLocal()">Verileri sil</button>')+
+    srow('Çıkış yap','Bu cihazdaki oturumu kapatır.','<button class="pill dng" onclick="logout()">Çıkış yap</button>');
+}
+function pgProf(){
+  return '<h2>Profil</h2><div class="pgrid"><div>'+
+    '<div class="fld"><label>Görünen ad</label><div class="row"><input id="pname" maxlength="16" value="'+esc(st.name)+'" style="flex:1"><button class="pill" onclick="saveName()">Kaydet</button></div></div>'+
+    '<div class="fld"><label>Profil fotoğrafı</label><div class="row"><button class="pill" onclick="document.getElementById(\'pfile\').click()">'+ico('clip')+'Fotoğraf yükle</button>'+(st.av?'<button class="pill alt" onclick="rmAvatar()">Kaldır</button>':'')+'</div>'+
+    '<input type="file" id="pfile" accept="image/png,image/jpeg,image/webp,image/gif" hidden onchange="pickAvatar(this.files[0]);this.value=\'\'">'+
+    '<div class="hint" style="margin-top:8px">Fotoğraf 128×128 boyutuna küçültülür. Sunucuya yüklenmez, yalnızca arkadaşlarına ve bulunduğun odadaki kişilere doğrudan iletilir.</div></div>'+
+    '</div><div><div class="m" style="margin-bottom:8px;letter-spacing:.6px">ÖNİZLEME</div>'+pcard()+'</div></div>';
+}
+function pgPriv(){
+  const sel=(k,o,cur)=>'<select onchange="setOpt(\''+k+'\',this.value)">'+o.map(x=>'<option value="'+x[0]+'"'+(x[0]==cur?' selected':'')+'>'+x[1]+'</option>').join('')+'</select>';
+  return '<h2>Gizlilik ve izinler</h2>'+
+    srow('Arkadaşlık isteklerine izin ver','Kapalıyken kimse sana arkadaşlık isteği gönderemez. Gönderen kişiye "kabul etmiyor" bildirimi gider.',sw('perm.friends',SET.perm.friends))+
+    srow('Doğrudan mesajlara izin ver','Kapalıyken arkadaşların bile sana doğrudan mesaj gönderemez.',sw('perm.dms',SET.perm.dms))+
+    srow('Odalarıma kimler girebilir','Yeni oda kurarken varsayılan seçim. "Onayımla" seçiliyse girmek isteyenler sen kabul edene kadar bekler.',sel('perm.room',[['open','Herkes (oda koduyla)'],['friends','Yalnızca arkadaşlarım'],['approve','Onayımla girsin']],SET.perm.room))+
+    srow('Mikrofon izni','<span id="micperm">Kontrol ediliyor…</span> Mikrofon izni verilmeden sesli odalara girilemez.','<button class="pill" onclick="askMic()">İzni iste</button>')+
+    '<div class="hint" style="margin-top:14px">Oda kuralı odayı kuran kişi tarafından uygulanır.</div>';
+}
+function pgVoice(){
+  const sink=window.HTMLMediaElement&&('setSinkId' in HTMLMediaElement.prototype);
+  return '<h2>Ses</h2>'+
+    srow('Giriş aygıtı (mikrofon)','Odaya girerken kullanılacak mikrofon. Odadayken değiştirirsen hemen uygulanır.','<select id="selmic" onchange="setOpt(\'mic\',this.value)"><option value="">Varsayılan</option></select>')+
+    srow('Çıkış aygıtı (hoparlör)',sink?'Diğer kişilerin sesinin çalınacağı aygıt.':'Bu tarayıcı çıkış aygıtı seçmeyi desteklemiyor.','<select id="selspk" onchange="setOpt(\'spk\',this.value)"'+(sink?'':' disabled')+'><option value="">Varsayılan</option></select>')+
+    srow('Çıkış ses seviyesi','Diğer kişilerin ses seviyesi: <b id="volv">'+SET.vol+'%</b>','<input type="range" min="0" max="100" value="'+SET.vol+'" oninput="document.getElementById(\'volv\').textContent=this.value+\'%\';setOpt(\'vol\',+this.value)">')+
+    srow('Mikrofon testi','Konuşunca çubuk hareket etmeli.','<div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end"><button id="mtbtn" class="pill" onclick="micTest()">Mikrofonu test et</button><div class="meter"><i id="mtbar"></i></div></div>')+
+    srow('Konuşma algılama hassasiyeti','Kimin konuştuğunu gösteren yeşil halkanın hassasiyeti: <b id="sensv">'+SET.sens+'</b> (düşük sayı = daha hassas)','<input type="range" min="4" max="50" value="'+SET.sens+'" oninput="document.getElementById(\'sensv\').textContent=this.value;setOpt(\'sens\',+this.value)">')+
+    '<h3 class="sh2">Ses işleme</h3>'+
+    srow('Gürültü bastırma','Klavye, fan gibi arka plan seslerini azaltır.',sw('ns',SET.ns))+
+    srow('Yankı engelleme','Hoparlörden gelen sesin mikrofona karışmasını azaltır.',sw('ec',SET.ec))+
+    srow('Otomatik ses ayarı','Mikrofon seviyesini otomatik dengeler.',sw('agc',SET.agc));
+}
+function pgNotif(){
+  const ps=window.Notification?({granted:'verildi',denied:'reddedildi',default:'henüz sorulmadı'})[Notification.permission]:'';
+  return '<h2>Bildirimler</h2>'+
+    srow('Bildirim sesleri','Yeni mesaj, oda girişi ve çıkışı ile arama için kısa sesler.',sw('notifSound',SET.notifSound))+
+    srow('Masaüstü bildirimleri',window.Notification?'Sekme arka plandayken yeni mesaj ve davetlerde sistem bildirimi gönderir. İzin: '+ps+'.':'Bu tarayıcı bildirimleri desteklemiyor.',sw('notifDesk',SET.notifDesk))+
+    '<div class="row" style="margin-top:16px"><span class="m">Dene:</span><button class="pill alt" onclick="snd(\'msg\')">Mesaj sesi</button><button class="pill alt" onclick="snd(\'join\')">Giriş sesi</button><button class="pill alt" onclick="snd(\'call\')">Arama sesi</button></div>';
+}
+function pgLook(){
+  return '<h2>Görünüm</h2><h3 class="sh2" style="margin-top:0">Vurgu rengi</h3><div class="swt">'+
+    Object.keys(ACC).map(k=>'<button title="'+k+'" class="'+(SET.accent==k?'on':'')+'" style="background:linear-gradient(135deg,'+ACC[k][0]+','+ACC[k][2]+')" onclick="setOpt(\'accent\',\''+k+'\')"></button>').join('')+'</div>'+
+    srow('Sohbet yazı boyutu','Mesajların yazı boyutu.','<div class="seg" style="width:240px;grid-template-columns:repeat(3,1fr)">'+[['s','Küçük'],['m','Normal'],['l','Büyük']].map(x=>'<button class="'+(SET.fsize==x[0]?'on':'')+'" onclick="setOpt(\'fsize\',\''+x[0]+'\')">'+x[1]+'</button>').join('')+'</div>')+
+    srow('Sıkışık görünüm','Mesajlar ve arkadaş listesi daha az boşlukla gösterilir.',sw('compact',SET.compact));
+}
+function pgAdv(){
+  return '<h2>Gelişmiş</h2>'+
+    srow('Bağlantı durumu','Aracı sunucu: <b>'+esc($('#st').textContent)+'</b>','')+
+    '<h3 class="sh2">Bağlantı ayarları (TURN)</h3><div class="hint" style="margin:6px 0 10px;line-height:1.5">Farklı ağlardaki (ör. mobil veri) arkadaşlarla bağlanamıyorsan gerekir. Ücretsiz metered.ca hesabından aldığın TURN kullanıcı adı ve şifresini yaz. Arkadaşların da aynısını girmeli. Kaydedince sayfa yenilenir.</div>'+
+    '<div class="row"><input id="tu" placeholder="TURN kullanıcı adı" style="flex:1"><input id="tk" type="password" placeholder="TURN şifresi" style="flex:1"><button class="pill" onclick="saveTurn()">Kaydet</button></div>'+
+    '<h3 class="sh2">Bağlantı bilgisi</h3><pre id="dbg" style="white-space:pre-wrap;font-size:11px;color:var(--m);max-height:220px;overflow:auto;margin:6px 0">'+esc(dbg.join('\n'))+'</pre><button class="pill alt" onclick="copy(dbg.join(\'\\n\'))">'+ico('copy')+'Kopyala</button>'+
+    '<h3 class="sh2">Hakkında</h3><div class="hint">Safir · sesli ve yazılı sohbet. Sesler, mesajlar ve dosyalar cihazlar arasında doğrudan iletilir.</div>';
+}
+const SPAGES={acc:['Hesabım',pgAcc],prof:['Profil',pgProf],priv:['Gizlilik ve izinler',pgPriv],voice:['Ses',pgVoice],notif:['Bildirimler',pgNotif],look:['Görünüm',pgLook],adv:['Gelişmiş',pgAdv]};
+function renderNav(){
+  const b=k=>'<button class="sn'+(curSP==k?' on':'')+'" onclick="sPage(\''+k+'\')">'+SPAGES[k][0]+'</button>';
+  $('#snav').innerHTML='<div class="sg">KULLANICI AYARLARI</div>'+b('acc')+b('prof')+b('priv')+'<div class="ssep"></div><div class="sg">UYGULAMA AYARLARI</div>'+b('voice')+b('notif')+b('look')+b('adv')+
+    '<div class="ssep"></div><button class="sn dg" onclick="logout()">Çıkış yap</button><div class="sver">Safir</div>';
+}
+function sPage(k){
+  if(!SPAGES[k])k='acc';
+  stopMicTest();curSP=k;renderNav();$('#spc').innerHTML=SPAGES[k][1]();
+  if(k=='voice')fillDevices();
+  if(k=='priv')permStatus();
+  if(k=='adv'){try{const t=JSON.parse(localStorage.getItem('safir_turn')||'null');if(t){$('#tu').value=t.u;$('#tk').value=t.k}}catch(e){}}
+}
+function openSettings(k){sideOpen(false);$('#settings').hidden=false;sPage(k||curSP)}
+function closeSettings(){stopMicTest();$('#settings').hidden=true}
+function setOpt(k,v){
+  const a=k.split('.');if(a.length==2)SET[a[0]][a[1]]=v;else SET[k]=v;saveSet();
+  if(k=='accent'||k=='fsize'||k=='compact')applyLook();
+  if(k=='vol'||k=='spk')applyOutAll();
+  if(k=='mic'||k=='ns'||k=='ec'||k=='agc'){restartMic();if(mt){stopMicTest();micTest()}}
+  if(k=='perm.room'){const r=document.getElementById('rmode');if(r)r.value=v}
+  if(k=='notifDesk'&&v){
+    if(!window.Notification){toast('Bu tarayıcı bildirimleri desteklemiyor.');SET.notifDesk=false;saveSet();sPage('notif');return}
+    Notification.requestPermission().then(r=>{if(r!='granted'){toast('Bildirim izni verilmedi.');SET.notifDesk=false;saveSet()}sPage('notif')});
+  }
+  if(k=='accent'||k=='fsize')sPage(curSP);
+}
+async function fillDevices(){
+  try{
+    const d=await navigator.mediaDevices.enumerateDevices();
+    const fill=(id,kind,cur)=>{const el=document.getElementById(id);if(!el)return;const l=d.filter(x=>x.kind==kind);
+      el.innerHTML='<option value="">Varsayılan</option>'+l.map((x,i)=>'<option value="'+esc(x.deviceId)+'"'+(x.deviceId==cur?' selected':'')+'>'+esc(x.label||(kind=='audioinput'?'Mikrofon ':'Hoparlör ')+(i+1))+'</option>').join('')};
+    fill('selmic','audioinput',SET.mic);fill('selspk','audiooutput',SET.spk);
+  }catch(e){}
+}
+async function permStatus(){
+  const e=document.getElementById('micperm');if(!e)return;
+  try{const r=await navigator.permissions.query({name:'microphone'});e.textContent=({granted:'İzin verildi.',denied:'Reddedildi, tarayıcı ayarlarından açmalısın.',prompt:'Henüz sorulmadı.'})[r.state]||r.state;r.onchange=permStatus}
+  catch(x){e.textContent='Durum okunamadı.'}
+}
+async function askMic(){
+  try{const s=await navigator.mediaDevices.getUserMedia({audio:true});s.getTracks().forEach(t=>t.stop());toast('Mikrofon izni verildi.')}catch(e){toast('Mikrofon izni verilmedi.')}
+  permStatus();
+}
+async function micTest(){
+  if(mt){stopMicTest();return}
+  try{
+    const s=await getMic(),ac=new (window.AudioContext||window.webkitAudioContext)(),a=ac.createAnalyser();a.fftSize=256;ac.createMediaStreamSource(s).connect(a);
+    const b=new Uint8Array(128);mt={s,ac,raf:0};
+    const loop=()=>{if(!mt)return;a.getByteFrequencyData(b);const v=b.reduce((x,y)=>x+y,0)/128,el=document.getElementById('mtbar');if(el)el.style.width=Math.min(100,v*2.2)+'%';mt.raf=requestAnimationFrame(loop)};loop();
+    const bt=document.getElementById('mtbtn');if(bt)bt.textContent='Testi durdur';
+  }catch(e){toast('Mikrofon açılamadı. İzin verdiğinden emin ol.')}
+}
+function stopMicTest(){
+  if(!mt)return;
+  try{cancelAnimationFrame(mt.raf);mt.s.getTracks().forEach(t=>t.stop());mt.ac.close()}catch(e){}
+  mt=null;const bt=document.getElementById('mtbtn');if(bt)bt.textContent='Mikrofonu test et';const el=document.getElementById('mtbar');if(el)el.style.width='0';
+}
+function saveName(){
+  const n=($('#pname').value||'').trim().slice(0,16);
+  if(!n)return toast('Görünen ad boş olamaz.');
+  st.name=n;saveProfile();refreshMe();bcastProf();draw();if(room)drawRoom();sPage('prof');toast('Görünen adın güncellendi.');
+}
+async function pickAvatar(f){
+  if(!f)return;
+  if(!/^image\//.test(f.type)||f.size>8*1048576)return toast('Lütfen 8 MB altında bir resim seç.');
+  try{
+    const bmp=await createImageBitmap(f),sz=Math.min(bmp.width,bmp.height),cv=document.createElement('canvas');cv.width=cv.height=128;
+    const cx=cv.getContext('2d');cx.fillStyle='#1b2440';cx.fillRect(0,0,128,128);
+    cx.drawImage(bmp,(bmp.width-sz)/2,(bmp.height-sz)/2,sz,sz,0,0,128,128);
+    let q=.85,url=cv.toDataURL('image/jpeg',q);
+    while(url.length>30000&&q>.4){q-=.1;url=cv.toDataURL('image/jpeg',q)}
+    if(!OKAV.test(url)||url.length>40000)return toast('Fotoğraf işlenemedi.');
+    st.av=url;saveProfile();refreshMe();bcastProf();draw();if(room){drawRoom();renderChat()}sPage('prof');toast('Profil fotoğrafın güncellendi.');
+  }catch(e){toast('Fotoğraf okunamadı.')}
+}
+function rmAvatar(){st.av='';saveProfile();refreshMe();bcastProf();draw();if(room){drawRoom();renderChat()}sPage('prof')}
+function wipeLocal(){
+  if(!confirm('Bu cihazdaki arkadaş listen, mesajların, ayarların ve profil fotoğrafın silinecek. Devam edilsin mi?'))return;
+  try{
+    const c=st.code,keys=[];for(let i=0;i<localStorage.length;i++)keys.push(localStorage.key(i));
+    keys.forEach(k=>{if(k&&(k.indexOf('safir_dm:'+c)==0||k.indexOf('safir_dmr:'+c)==0||k=='safir_set:'+c||k=='safir_prof:'+c||k=='sesoda2f:'+c||k=='safir_avc'))localStorage.removeItem(k)});
+  }catch(e){}
+  location.reload();
+}
+document.addEventListener('keydown',e=>{if(e.key=='Escape'&&!$('#settings').hidden)closeSettings()});
 
 /* ---------- ses ve odalar ---------- */
 let ctx;
@@ -824,13 +1324,13 @@ function watch(id,s){
 setInterval(()=>{
   const b=new Uint8Array(128);
   for(const id in an){an[id].getByteFrequencyData(b);const v=b.reduce((x,y)=>x+y,0)/128;
-    const t=document.getElementById('t-'+id);if(t)t.classList.toggle('sp',v>18)}
+    const t=document.getElementById('t-'+id);if(t)t.classList.toggle('sp',v>(SET.sens||18))}
 },120);
 
 async function mic(){
   if(local)return true;
   try{
-    local=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
+    local=await getMic();
     local.getAudioTracks()[0].enabled=!muted;watch('me',local);
     try{navigator.wakeLock&&navigator.wakeLock.request('screen').then(l=>wl=l).catch(()=>{})}catch(e){}
     return true;
@@ -841,12 +1341,14 @@ async function create(){
   if(!peer||!peer.open)return toast('Önce aracı sunucuya bağlanmalısın.');
   if(!await mic())return;
   const code=rnd(6),name=$('#rname').value.trim().slice(0,30)||st.name+' odası';
-  room={code,name,host:true,members:{}};
+  room={code,name,host:true,members:{},mode:($('#rmode')&&$('#rmode').value)||SET.perm.room||'open',allowed:new Set(),pending:[]};
   const rp=room.rpeer=new Peer(RPF+code,icecfg());
   rp.on('open',()=>{log('oda açıldı: '+code);presence()});
   rp.on('error',e=>{log('oda hatası: '+e.type);if(e.type=='unavailable-id'){toast('Kod çakıştı, tekrar dene.');leave()}});
-  rp.on('connection',c=>c.on('open',()=>c.send({t:'members',rname:room.name,
-    list:[{code:st.code,name:st.name}].concat(Object.keys(room.members).map(k=>({code:k,name:room.members[k].name})))})));
+  rp.on('connection',c=>{
+    c.on('data',d=>{if(d&&d.t=='who')c.who=String(d.name||'').slice(0,16)});
+    c.on('open',()=>setTimeout(()=>gateJoin(c),150));
+  });
   draw();
 }
 async function join(code){
@@ -862,10 +1364,14 @@ async function join(code){
 function connectRoom(){
   if(!room||!joining)return;
   const code=room.code,c=peer.connect(RPF+code);
+  c.on('open',()=>{try{c.send({t:'who',name:st.name})}catch(e){}});
   clearTimeout(jTimer);
   jTimer=setTimeout(()=>{if(joining&&room&&room.code==code)fail('Odaya bağlanılamadı. Ağın doğrudan bağlantıyı engelliyor olabilir, Bağlantı ayarlarına TURN bilgisi gir.')},15000);
   c.on('data',d=>{
-    if(d.t!='members'||!room||room.code!=code)return;
+    if(!room||room.code!=code)return;
+    if(d.t=='wait'){clearTimeout(jTimer);jTimer=setTimeout(()=>{if(joining&&room&&room.code==code)fail('Oda sahibi yanıt vermedi.')},90000);toast('Oda sahibinin onayı bekleniyor…');return}
+    if(d.t=='denied'){fail(d.why=='friends'?'Bu oda yalnızca oda sahibinin arkadaşlarına açık.':'Oda sahibi katılmana izin vermedi.');return}
+    if(d.t!='members')return;
     clearTimeout(jTimer);joining=false;room.name=String(d.rname||room.name).slice(0,30);
     log('oda üyeleri alındı: '+(d.list||[]).length);
     (d.list||[]).forEach(m=>{if(CODE.test(m.code)&&m.code!=st.code)callPeer(m.code,String(m.name).slice(0,16))});
@@ -895,9 +1401,9 @@ function addMember(code,name,c){
   setTimeout(()=>clearInterval(iv),5000);
   c.on('stream',s=>{
     if(!m.el){m.el=new Audio();m.el.autoplay=true}
-    m.el.srcObject=s;m.el.muted=deaf;watch(code,s);log(name+' sesi geldi');if(!m.joined){m.joined=1;sys(name+' odaya katıldı')}draw();
+    m.el.srcObject=s;m.el.muted=deaf;applyOut(m.el);watch(code,s);log(name+' sesi geldi');if(!m.joined){m.joined=1;sys(name+' odaya katıldı');snd('join')}draw();
   });
-  c.on('close',()=>{if(room&&room.members[code]===m){delete room.members[code];delete an[code];sys(name+' odadan ayrıldı');closeChat(code);draw()}});
+  c.on('close',()=>{if(room&&room.members[code]===m){delete room.members[code];delete an[code];sys(name+' odadan ayrıldı');snd('leave');closeChat(code);draw()}});
   c.on('error',e=>{log('arama hatası '+name+': '+(e.type||e));try{c.close()}catch(x){}});
   draw();
 }
@@ -928,11 +1434,11 @@ function btns(){
   d.innerHTML=ico(deaf?'hpoff':'hp')+'<span>Kulaklık</span>';d.className='cb'+(deaf?' off':'');d.title=deaf?'Kulaklığı aç':'Kulaklığı kapat';
 }
 function drawRoom(){
-  $('#lobby').hidden=!!room;$('#inroom').hidden=!room;
+  $('#lobby').hidden=!!room||!!dmWith;$('#inroom').hidden=!room||!!dmWith;$('#dmv').hidden=!dmWith;
   if(!room)return;
   $('#rt').textContent=room.name;$('#rc').textContent=room.code;
-  const n=Object.keys(room.members).length+1;$('#rcnt').textContent=n+(n==1?' kişi odada':' kişi odada');
-  const tile=(id,nm,me)=>'<div class="tile" id="t-'+id+'"><div class="av" style="background:'+avc(nm)+'">'+esc((nm[0]||'?').toUpperCase())+'</div><div class="tn">'+esc(nm)+(me?' <span class="m">(sen)</span>':'')+'</div></div>';
+  const n=Object.keys(room.members).length+1;$('#rcnt').textContent=n+' kişi odada'+(room.host&&room.mode=='friends'?' · yalnızca arkadaşlar':room.host&&room.mode=='approve'?' · onay gerekli':'');
+  const tile=(id,nm,me)=>'<div class="tile" id="t-'+id+'"><div class="av" style="background:'+avc(nm)+'">'+esc((nm[0]||'?').toUpperCase())+avImg(avatarOf(id=='me'?st.code:id))+'</div><div class="tn">'+esc(nm)+(me?' <span class="m">(sen)</span>':'')+'</div></div>';
   $('#grid').innerHTML=tile('me',st.name,1)+Object.keys(room.members).map(k=>tile(k,room.members[k].name)).join('');
   if(joining&&!Object.keys(room.members).length)$('#grid').innerHTML+='<div class="m" style="align-self:center">Odaya bağlanılıyor…</div>';
 }
